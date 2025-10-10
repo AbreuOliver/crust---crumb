@@ -15,7 +15,11 @@
 	}
 </script>
 
-<section id="hero" class="min-h-svh relative isolate overflow-hidden border-2 border-violet-600">
+<section
+  id="hero"
+  class="min-h-svh relative isolate overflow-hidden bg-gradient-to-b from-[#F1EFE8] to-[#090A0A]"
+>
+
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="grid items-center gap-10 py-16 sm:py-24 lg:grid-cols-12">
       <!-- Headline + CTAs -->

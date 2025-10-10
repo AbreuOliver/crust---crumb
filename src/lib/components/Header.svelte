@@ -4,7 +4,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center border-b border-zinc-200 p-4 backdrop-blur-2xl"
+	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center border-b border-zinc-200 p-4 backdrop-blur-2xl bg-transparent"
 >
 <nav class="h-full w-full max-w-screen-lg flex">
 	<!-- LEFT -->
