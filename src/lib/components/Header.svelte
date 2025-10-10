@@ -22,21 +22,21 @@
 		ticking = false;
 	}
 
-	function onScroll() {
-		if (!ticking) {
-			ticking = true;
-			requestAnimationFrame(update); // efficient on mobile
-		}
-	}
+	// function onScroll() {
+	// 	if (!ticking) {
+	// 		ticking = true;
+	// 		requestAnimationFrame(update); // efficient on mobile
+	// 	}
+	// }
 
-	onMount(() => {
-		window.addEventListener('scroll', onScroll, { passive: true });
-		return () => window.removeEventListener('scroll', onScroll);
-	});
+	// onMount(() => {
+	// 	window.addEventListener('scroll', onScroll, { passive: true });
+	// 	return () => window.removeEventListener('scroll', onScroll);
+	// });
 </script>
 
 <header
-	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center p-4 backdrop-blur-md"
+	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center p-4 backdrop-blur-md bg-[#1c1d1e] bg-white"
 >
 <!-- <header
 	class={`fixed inset-x-0 top-0 z-[100] h-20 flex justify-center items-center
@@ -52,14 +52,14 @@
 			<button
 				type="button"
 				aria-label="Open menu"
-				class="group inline-grid size-10 place-items-center rounded-full bg-neutral-200/40
-                 hover:bg-neutral-100 focus:outline-none 
-                 focus-visible:ring-2 focus-visible:ring-emerald-500 active:bg-neutral-200"
+				class="group inline-grid size-10 place-items-center rounded-full 
+                 hover:bg-neutral-300 focus:outline-none hover:scale-110
+                 focus-visible:ring-2 focus-visible:ring-[#366b5b] active:bg-neutral-800"
 			>
 				<!-- Make SVG inherit color -->
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="size-6 text-neutral-800"
+					class="size-6 text-neutral-700"
 					viewBox="0 0 24 24"
 					fill="none"
 				>
@@ -91,13 +91,13 @@
 				<button
 					type="button"
 					aria-label="Open cart"
-					class="group inline-grid size-10 place-items-center rounded-full bg-neutral-200/40
-                   hover:bg-neutral-100 focus:outline-none
-                   focus-visible:ring-2 focus-visible:ring-emerald-500 active:bg-neutral-200"
+					class="group inline-grid size-10 place-items-center rounded-full 
+                   hover:bg-neutral-300 focus:outline-none
+                   focus-visible:ring-2 focus-visible:ring-[#366b5b] active:bg-neutral-800"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="size-6 text-neutral-800"
+						class="size-6 text-neutral-700"
 						viewBox="0 0 24 24"
 						fill="none"
 					>
@@ -119,7 +119,7 @@
 				{#if cartCount > 0}
 					<span
 						class="absolute right-0.5 -bottom-1 flex h-5 min-w-[1.1rem] items-center justify-center
-                     rounded-full bg-[#264B3F] px-1.5 text-[11px] leading-none font-semibold text-white
+                     rounded-full bg-[#366b5b] px-1.5 text-[11px] leading-none font-semibold text-white
                      ring-2 ring-white"
 					>
 						{cartCount}
