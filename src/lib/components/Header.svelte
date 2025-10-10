@@ -35,25 +35,25 @@
 	});
 </script>
 
-<!-- <header
-	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center border-b border-zinc-200 bg-transparent p-4 backdrop-blur-2xl"
-> -->
 <header
+	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-cente  p-4 backdrop-blur-md"
+>
+<!-- <header
 	class={`fixed inset-x-0 top-0 z-[100] h-20 flex justify-center items-center
           transition-transform duration-300 will-change-transform backdrop-blur-2xl
           ${hidden ? '-translate-y-full' : 'translate-y-0'}
           ${atTop ? 'bg-transparent' : 'border-b border-zinc-200 bg-white/55 backdrop-blur-xl'}
           px-4`}
 	style="padding-top: env(safe-area-inset-top);"
->
+> -->
 	<nav class="flex h-full w-full max-w-screen-lg">
 		<!-- LEFT -->
 		<div class="flex items-center">
 			<button
 				type="button"
 				aria-label="Open menu"
-				class="group inline-grid size-10 place-items-center rounded-full
-                 hover:bg-neutral-100 focus:outline-none
+				class="group inline-grid size-10 place-items-center rounded-full bg-neutral-200/40
+                 hover:bg-neutral-100 focus:outline-none 
                  focus-visible:ring-2 focus-visible:ring-emerald-500 active:bg-neutral-200"
 			>
 				<!-- Make SVG inherit color -->
@@ -91,7 +91,7 @@
 				<button
 					type="button"
 					aria-label="Open cart"
-					class="group inline-grid size-10 place-items-center rounded-full
+					class="group inline-grid size-10 place-items-center rounded-full bg-neutral-200/40
                    hover:bg-neutral-100 focus:outline-none
                    focus-visible:ring-2 focus-visible:ring-emerald-500 active:bg-neutral-200"
 				>
