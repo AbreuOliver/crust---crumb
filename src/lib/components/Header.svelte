@@ -36,7 +36,7 @@
 </script>
 
 <header
-	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-cente  p-4 backdrop-blur-md"
+	class="sticky top-0 z-100 flex h-20 w-screen items-center justify-center p-4 backdrop-blur-md"
 >
 <!-- <header
 	class={`fixed inset-x-0 top-0 z-[100] h-20 flex justify-center items-center
