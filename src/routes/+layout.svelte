@@ -5,7 +5,7 @@
 </script>
 
 
-<section class="h-dvh overflow-y-auto overscroll-y-none" style="-webkit-overflow-scrolling: touch;">
+<section class="h-dvh overflow-y-auto overscroll-y-none" style="-webkit-overflow-scrolling: touch; smooth-scrolling">
 	<Header />
 	{@render children()}
 </section>

@@ -2,7 +2,8 @@
 
 html {
 	-webkit-text-size-adjust: 100%;
-	scroll-behavior: smooth;
+	--scroll-behavior: smooth !important;
+	scroll-behavior: smooth !important;
 	overflow-x: hidden;
 	/* Primary choice for a Figtree feel */
 	/* font-family: 'DM Sans', sans-serif; */
