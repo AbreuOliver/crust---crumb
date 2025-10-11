@@ -90,7 +90,7 @@
 	<section id="services" class="relative bg-gradient-to-b from-black via-black to-black backdrop-blur-3xl pt-32 pb-20 md:pb-0 lg:pb-0 xl:pt-96">
 		<div class="mx-auto max-w-7xl px-6 lg:px-12 xl:px-6 2xl:px-0">
 			<div class="flex flex-wrap items-center gap-6">
-				<h2 class="text-7xl font-bold text-white xl:text-8xl">Our services</h2>
+				<h2 class="text-5xl font-thin font-serif text-white xl:text-6xl">Our services</h2>
 				<span
 					class="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white"
 					>03 services</span
@@ -161,7 +161,7 @@
 				class="rellax flex flex-wrap items-center gap-6"
 				style="transform: translate3d(0px, 0px, 0px);"
 			>
-				<h2 class="text-7xl font-bold text-white xl:text-8xl">About us</h2>
+				<h2 class="text-5xl font-thin font-serif text-white xl:text-6xl">About us</h2>
 				<span
 					class="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white"
 					>01 Duo</span

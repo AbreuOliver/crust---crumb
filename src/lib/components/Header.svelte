@@ -120,8 +120,8 @@
     >
       <div class="rounded-none border border-zinc-200 bg-white backdrop-blur-xl shadow-xl ring-1 ring-black/5">
         <!-- DRAWER HEADER -->
-        <div class="flex items-center justify-between px-4 py-3 sm:px-6">
-          <div class="flex items-baseline gap-3">
+        <div class="flex items-center justify-between px-4 pt-6 pb-3 sm:px-6">
+          <div class="flex items-center gap-3">
             <h2 class="text-lg font-semibold text-neutral-900">Your Cart</h2>
             <span class="text-xs font-medium text-neutral-600">
               {$cartCount} item{$cartCount === 1 ? '' : 's'}
@@ -169,7 +169,7 @@
 
           <!-- DRAWER FOOTER -->
           <div class="flex items-center justify-between border-t border-neutral-200 px-4 py-4 sm:px-6">
-            <div class="text-sm text-neutral-100">Subtotal</div>
+            <div class="text-sm text-neutral-700">Subtotal</div>
             <div class="tabular-nums text-base font-semibold text-neutral-900">
               ${$cartSubtotal.toFixed(2)}
             </div>
@@ -183,7 +183,7 @@
             </button>
             <a
               href="/checkout"
-              class="rounded-md bg-[var(--primary-green)] px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
+              class="rounded-md bg-[var(--light-green)] px-4 py-2 text-sm font-semibold text-black hover:brightness-110"
               on:click={closeCart}
             >
               Checkout
