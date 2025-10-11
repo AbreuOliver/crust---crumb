@@ -41,20 +41,21 @@
      ╚══════════════════════════════════════════════════════════════════╝ -->
 <section
   id="menu"
+
   class="relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 pb-12 backdrop-blur-3xl lg:pt-0 lg:pb-32"
 >
-  <div class="mx-auto max-w-5xl px-6 lg:px-12 xl:px-6 xl:pb-96 2xl:px-0">
-    <h2 class="font-serif text-7xl font-thin text-white xl:text-8xl">Menu</h2>
+  <div class="mx-auto max-w-5xl px-0 lg:px-12 xl:px-6 xl:pb-96 2xl:px-0">
+    <h2 class="font-serif text-4xl px-6 font-thin text-white xl:text-6xl">Menu</h2>
 
     <!-- ╔══════════════════════════════════════════════════════════════╗
          ║                  LAYOUT GRID (SIDEBAR + CONTENT)            ║
          ╚══════════════════════════════════════════════════════════════╝ -->
-    <div class="pt-12 md:grid md:grid-cols-12 md:gap-8">
+    <div class="pt-8 md:grid md:grid-cols-12 md:gap-8">
 
       <!-- ╔════════════════════════════════════════════════════════════╗
            ║      MOBILE CATEGORY LIST (CARD, NO X-OVERFLOW)            ║
            ╚════════════════════════════════════════════════════════════╝ -->
-      <div class="z-40 px-0 md:hidden">
+      <div class="z-40 px-4 md:hidden">
         <div class="overflow-hidden rounded-xl border border-white/20 bg-black/60 backdrop-blur-sm">
           <ul class="divide-y divide-white/10" role="tablist" aria-label="Menu categories">
             {#each categories as c}
@@ -66,9 +67,9 @@
                   aria-controls={`panel-${c.id}`}
                   aria-selected={active === c.id}
                   class="group grid w-full grid-cols-[1fr_auto] items-center gap-3 px-4 py-4 text-left
-                         focus:outline-none focus:ring-2 focus:ring-emerald-500/60
+                         focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)]/60
                          {active === c.id
-                           ? 'bg-emerald-700 text-white'
+                           ? 'bg-[var(--primary-green)] text-white'
                            : 'bg-black/30 text-white/85 hover:bg-white/5'}"
                 >
                   <!-- ◤ LABEL -->
@@ -101,9 +102,9 @@
               aria-controls={`panel-${c.id}`}
               aria-selected={active === c.id}
               class="w-full rounded-lg border px-5 py-4 text-left transition
-                     focus:outline-none focus:ring-2 focus:ring-emerald-500/60
+                     focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)]/60
                      {active === c.id
-                       ? 'border-emerald-700 bg-emerald-800/50 text-white'
+                       ? 'border-[var(--primary-green)] bg-[var(--primary-green)]/50 text-white'
                        : 'border-white/20 bg-transparent text-white/80 hover:text-white'}"
             >
               <span class="mr-2 opacity-70">{(i + 1).toString().padStart(2, '0')}.</span>
@@ -124,12 +125,12 @@
         aria-labelledby={active}
       >
         <!-- ◤ ACTIVE CATEGORY TITLE (STICKY ON SCROLL) -->
-        <h3 class="sticky top-24 mt-8 text-xs font-light tracking-widest text-white/80 uppercase md:mt-0">
+        <h3 class="mt-8 py-4 pl-6 text-xs font-light tracking-widest text-white/80 uppercase md:mt-0">
           {label(active)}
         </h3>
 
         <!-- ◤ ITEM CARDS -->
-        <div class="mt-4 space-y-6">
+        <div class="mt-4 space-y-6 px-4">
           <!-- ◼ CHANGE: KEYED EACH (l.id) TO PREVENT UI MIX-UPS -->
           {#each filtered as it (it.id)}
             <div

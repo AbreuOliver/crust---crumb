@@ -41,16 +41,16 @@
 <!-- ╔══════════════════════════════════════════════════════════════════╗
      ║                              HEADER                              ║
      ╚══════════════════════════════════════════════════════════════════╝ -->
-<header class="sticky top-0 z-[100] flex h-20 w-screen items-center justify-center bg-white p-4 backdrop-blur-md">
+<header class="sticky top-0 z-[100] flex h-20 w-screen items-center justify-center bg-[var(--primary-green)] p-4 backdrop-blur-md">
   <nav class="flex h-full w-full max-w-screen-lg">
     <!-- LEFT -->
     <div class="flex items-center">
       <button
         type="button"
         aria-label="Open menu"
-        class="group inline-grid size-10 place-items-center rounded-full hover:scale-110 hover:bg-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#366b5b] active:bg-neutral-800"
+        class="group inline-grid size-10 place-items-center rounded-full hover:scale-110 hover:bg-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)] active:bg-neutral-800"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-neutral-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-neutral-100" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M10 6h10M4 12h16M7 12h13M4 18h10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
         </svg>
       </button>
@@ -58,9 +58,9 @@
 
     <!-- CENTER -->
     <div class="inline-flex h-full w-full items-center justify-center">
-      <a href="#home">
+      <a href="/#home">
         <img
-          src="https://ik.imagekit.io/bip1v395ybp/Crust%20&%20Crumb_H4zR-queh.svg?updatedAt=1760044564192"
+          src="https://ik.imagekit.io/bip1v395ybp/Crust-and-Crumb/Crust%20&%20Crumb_white_mdFTIN36B.svg?updatedAt=1760143488816"
           alt="Crust & Crumb logo"
           class="h-14 w-auto py-1"
         />
@@ -77,9 +77,9 @@
           aria-expanded={cartOpen}
           aria-controls="cart-drawer"
           on:click={() => (cartOpen ? closeCart() : openCart())}
-          class="group inline-grid size-10 place-items-center rounded-full hover:bg-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#366b5b] active:bg-neutral-800"
+          class="group inline-grid size-10 place-items-center rounded-full hover:bg-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)] active:bg-neutral-800"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-neutral-700" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-6 text-neutral-100" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
               <path d="M6.331 8H17.67a2 2 0 0 1 1.977 2.304l-1.255 8.152A3 3 0 0 1 15.426 21H8.574a3 3 0 0 1-2.965-2.544l-1.255-8.152A2 2 0 0 1 6.331 8" />
               <path d="M9 11V6a3 3 0 0 1 6 0v5" />
@@ -89,7 +89,7 @@
 
         {#if $cartCount > 0}
           <span
-            class="absolute right-0.5 -bottom-1 flex h-5 min-w-[1.1rem] items-center justify-center rounded-full bg-[#366b5b] px-1.5 text-[11px] leading-none font-semibold text-white ring-2 ring-white"
+            class="absolute right-0.5 -bottom-1 flex h-5 w-5 items-center justify-center rounded-full bg-[var(--light-green)] p-1 text-md leading-none font-semibold text-white ring-2 ring-white"
             aria-label="Items in cart"
           >
             {$cartCount}
@@ -106,6 +106,7 @@
 {#if cartOpen}
   <!-- Drawer container (fixed under header). h-20 header => top-20 -->
   <div class="fixed inset-x-0 top-20 z-[95] flex justify-center pointer-events-none">
+    <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div
       id="cart-drawer"
       bind:this={drawerEl}
@@ -129,7 +130,7 @@
           <div class="flex items-center gap-2">
             <button
               type="button"
-              class="rounded-md px-2 py-1 text-sm text-neutral-700 hover:bg-neutral-200/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#366b5b]"
+              class="rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-neutral-200/70 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)]"
               on:click={closeCart}
             >
               Close
@@ -139,7 +140,7 @@
 
         <!-- DRAWER BODY -->
         {#if $cart.lines.length === 0}
-          <div class="px-6 py-8 text-neutral-700">Your cart is empty.</div>
+          <div class="px-6 py-8 text-neutral-100">Your cart is empty.</div>
         {:else}
           <ul class="max-h-[45vh] overflow-auto px-2 py-2 sm:px-0">
             {#each $cart.lines as l}
@@ -156,7 +157,7 @@
                     aria-label={`Quantity for ${l.name}`}
                   />
                   <button
-                    class="rounded-md px-2 py-1 text-sm text-neutral-700 hover:bg-neutral-200/70"
+                    class="rounded-md px-2 py-1 text-sm text-neutral-600 hover:bg-neutral-200/70"
                     on:click={() => cart.remove(l.id)}
                   >
                     Remove
@@ -168,7 +169,7 @@
 
           <!-- DRAWER FOOTER -->
           <div class="flex items-center justify-between border-t border-neutral-200 px-4 py-4 sm:px-6">
-            <div class="text-sm text-neutral-700">Subtotal</div>
+            <div class="text-sm text-neutral-100">Subtotal</div>
             <div class="tabular-nums text-base font-semibold text-neutral-900">
               ${$cartSubtotal.toFixed(2)}
             </div>
@@ -182,7 +183,7 @@
             </button>
             <a
               href="/checkout"
-              class="rounded-md bg-[#366b5b] px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
+              class="rounded-md bg-[var(--primary-green)] px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
               on:click={closeCart}
             >
               Checkout
@@ -198,5 +199,5 @@
     class="fixed inset-x-0 top-[5rem] bottom-0 z-[90] bg-black/20"
     aria-label="Close cart"
     on:click={closeCart}
-  />
+  ></button>
 {/if}
