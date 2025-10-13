@@ -14,10 +14,6 @@ html {
 	margin: 0;
 	overscroll-behavior-y: none;
 
-	overflow: hidden;
-
-	position: fixed;
-
 	/* Primary choice for a Figtree feel */
 	/* font-family: 'DM Sans', sans-serif; */
 
@@ -35,27 +31,6 @@ html {
 
 	/* +1 Elegant, crisp geometric sans */
 	/* font-family: 'Raleway', sans-serif; */
-}
-
-:root,
-html,
-body {
-	height: 100%;
-}
-html,
-body {
-	margin: 0;
-	padding: 0;
-	/* lock the viewport; we will scroll a child instead */
-	overflow: hidden;
-}
-
-.app-scroll {
-	position: fixed; /* or absolute; fixed is simpler here */
-	inset: 0; /* top:0; right:0; bottom:0; left:0 */
-	overflow: auto;
-	-webkit-overflow-scrolling: touch; /* smooth iOS inertial scroll */
-	overscroll-behavior-y: contain; /* stops chaining into viewport where supported */
 }
 
 .serif {

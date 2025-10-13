@@ -10,10 +10,12 @@
 	{@render children()}
 </section> -->
 
-<section
+<!-- <section
   class="app-scroll overflow-y-auto overflow-x-hidden overscroll-contain"
   style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth"
->
+> -->
   <Header />
+  <main class="min-h-screen flex flex-col overflow-x-hidden">
   {@render children()}
-</section>
+  </main>
+<!-- </section> -->
