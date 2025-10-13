@@ -4,18 +4,7 @@
 	let { children } = $props();
 </script>
 
-
-<!-- <section class="app-scroll h-dvh overflow-y-auto overscroll-x-none overflow-x-hidden" style="-webkit-overflow-scrolling: touch; smooth-scrolling">
-	<Header />
+<Header />
+<main class="flex min-h-screen flex-col overflow-x-hidden snap-y snap-mandatory">
 	{@render children()}
-</section> -->
-
-<!-- <section
-  class="app-scroll overflow-y-auto overflow-x-hidden overscroll-contain"
-  style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth"
-> -->
-  <Header />
-  <main class="min-h-screen flex flex-col overflow-x-hidden">
-  {@render children()}
-  </main>
-<!-- </section> -->
+</main>

@@ -1,4 +1,4 @@
-<section id="about" class="relative z-10 scroll-mt-30 bg-black py-20 md:py-15 lg:pt-0">
+<section id="about" class="relative z-10 scroll-mt-30 bg-black py-20 md:py-15 lg:pt-0 snap-start min-h-[100svh]">
 	<div class="mx-auto max-w-5xl px-6 lg:px-12 xl:px-6 xl:py-20 2xl:px-0">
 		<h2 class="serif pr-6 text-4xl font-thin text-white xl:text-6xl">About</h2>
 
