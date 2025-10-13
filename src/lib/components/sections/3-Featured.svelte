@@ -32,10 +32,10 @@
 		<h2 class="serif pr-6 text-4xl font-thin text-white xl:text-6xl">{heading}</h2>
 
 		<!-- Content -->
-		<div class="mt-10 grid gap-10 sm:mt-14 sm:grid-cols-2 sm:items-start">
+		<div class="mt-10 grid gap-10 sm:mt-14 sm:items-start">
 			<!-- Scroll-snap rail -->
 			<div
-				class="-mx-4 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2
+				class="-mx-4 mt-6 flex snap-x w-full snap-mandatory gap-4 overflow-x-auto px-4 pb-2
              [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
 				aria-label="Featured items"
 			>

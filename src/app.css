@@ -13,6 +13,11 @@ html {
 	height: 100%;
 	margin: 0;
 	overscroll-behavior-y: none;
+
+	overflow: hidden;
+
+	position: fixed;
+
 	/* Primary choice for a Figtree feel */
 	/* font-family: 'DM Sans', sans-serif; */
 
@@ -30,6 +35,12 @@ html {
 
 	/* +1 Elegant, crisp geometric sans */
 	/* font-family: 'Raleway', sans-serif; */
+}
+
+body {
+	overflow: auto;
+	height: 100%;
+	position: relative;
 }
 
 .serif {

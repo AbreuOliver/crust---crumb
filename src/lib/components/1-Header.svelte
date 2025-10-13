@@ -175,12 +175,12 @@
             </div>
           </div>
           <div class="flex items-center justify-end gap-2 px-4 pb-4 sm:px-6">
-            <button
+            <!-- <button
               class="rounded-md border border-neutral-300 bg-white px-4 py-2 text-sm text-neutral-800 hover:bg-neutral-100"
               on:click={() => cart.clear()}
             >
               Clear
-            </button>
+            </button> -->
             <a
               href="/checkout"
               class="rounded-md bg-[var(--light-green)] px-4 py-2 text-sm font-semibold text-black hover:brightness-110"
