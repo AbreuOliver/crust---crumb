@@ -42,10 +42,10 @@
 <section
   id="menu"
 
-  class="relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 pb-12 backdrop-blur-3xl lg:pt-0 lg:pb-32"
+  class="relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 pb-12 backdrop-blur-3xl lg:pt-0 lg:pb-32 scroll-mt-24"
 >
   <div class="mx-auto max-w-5xl px-0 lg:px-12 xl:px-6 xl:pb-96 2xl:px-0">
-    <h2 class="font-serif text-4xl px-6 font-thin text-white xl:text-6xl">Menu</h2>
+    <h2 class="serif text-4xl px-6 font-thin text-white xl:text-6xl">Menu</h2>
 
     <!-- ╔══════════════════════════════════════════════════════════════╗
          ║                  LAYOUT GRID (SIDEBAR + CONTENT)            ║

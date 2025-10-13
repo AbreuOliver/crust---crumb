@@ -10,6 +10,9 @@ html {
 	--scroll-behavior: smooth !important;
 	scroll-behavior: smooth !important;
 	overflow-x: hidden;
+	height: 100%;
+	margin: 0;
+	overscroll-behavior-y: none;
 	/* Primary choice for a Figtree feel */
 	/* font-family: 'DM Sans', sans-serif; */
 
@@ -27,4 +30,8 @@ html {
 
 	/* +1 Elegant, crisp geometric sans */
 	/* font-family: 'Raleway', sans-serif; */
+}
+
+.serif {
+	font-family: 'Playfair Display', serif;
 }
