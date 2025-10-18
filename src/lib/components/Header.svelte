@@ -51,11 +51,14 @@
 			<button
 				type="button"
 				aria-label="Open menu"
-				class="group inline-grid size-10 place-items-center rounded-full hover:scale-110 hover:bg-neutral-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)] active:bg-neutral-800"
+				class="group inline-grid size-10 place-items-center rounded-full
+           hover:scale-110 hover:bg-neutral-300
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)]
+           active:bg-neutral-800"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="size-6 text-neutral-100 hover:text-neutral-700"
+					class="size-6 text-neutral-200 transition-colors group-hover:text-neutral-950"
 					viewBox="0 0 24 24"
 					fill="none"
 					aria-hidden="true"
@@ -74,11 +77,6 @@
 		<!-- CENTER -->
 		<div class="inline-flex h-full w-full items-center justify-center">
 			<a href="/#home">
-				<!-- <img
-          src="https://ik.imagekit.io/bip1v395ybp/Crust-and-Crumb/Crust%20&%20Crumb_white_mdFTIN36B.svg?updatedAt=1760143488816"
-          alt="Crust & Crumb logo"
-          class="h-14 w-auto py-1 hover:shadow-xl hover:shadow-blue-400/50 transition-all duration-300"
-        /> -->
 				<Wordmark />
 			</a>
 		</div>
@@ -97,7 +95,7 @@
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="size-6 text-neutral-100 hover:text-neutral-700"
+						class="size-6 text-neutral-100 group-hover:text-neutral-700"
 						viewBox="0 0 24 24"
 						fill="none"
 						aria-hidden="true"

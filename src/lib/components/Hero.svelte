@@ -26,8 +26,7 @@
 		<div>
 			<div class="ml-auto md:w-2/3 md:pt-12 lg:w-1/2">
 				<p class="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">
-					Handcrafted in small batches, every bake carries the comfort of home and the quiet
-					perfection that only patience can bring
+					Handcrafted in small batches, every bake has been honed with patience and carries the quiet comfort of home
 				</p>
 				<button>
 				<a

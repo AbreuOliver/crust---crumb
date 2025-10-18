@@ -1,7 +1,7 @@
 <script lang="ts">
 	import About from '$lib/components/sections/2-About.svelte';
 	import Hero from '$lib/components/Hero.svelte';
-	import Menu from '$lib/components/Menu.svelte';
+	import Menu from '$lib/components/sections/4-Menu.svelte';
 	import '../app.css';
 	import Featured from '$lib/components/sections/3-Featured.svelte';
 	import type { FeaturedItem } from '$lib/types';
@@ -65,5 +65,5 @@
 
 <Hero />
 <About />
-<Featured heading="Seasonal" items={featured} />
+<!-- <Featured heading="Seasonal" items={featured} /> -->
 <Menu />

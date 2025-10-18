@@ -22,7 +22,7 @@
   ];
 
   const itemsRaw = [
-    { cat: 'blends',   name: 'Lounge Elegance Espresso', price: 3.5,  desc: 'Rich and full-bodied with notes of dark chocolate and toasted nuts.' },
+    { cat: 'blends',   name: 'Lounge Elegance Espresso', price: 3.45,  desc: 'Rich and full-bodied with notes of dark chocolate and toasted nuts.' },
     { cat: 'blends',   name: 'Velvet Mocha Delight',     price: 4.25, desc: 'Silky mocha with a hint of vanilla, crowned with velvety cream.' },
     { cat: 'pastries', name: 'Morning Almond Croissant', price: 3.75, desc: 'Flaky croissant layered with almond frangipane.' },
     { cat: 'treats',   name: 'Sea-Salt Caramel Tart',    price: 4.0,  desc: 'Buttery crust, caramel center, kiss of sea salt.' }

@@ -13,3 +13,14 @@ export type FeaturedItem = {
 
 export let heading = 'Featured';
 export let items: FeaturedItem[] = [];
+
+export type Category = { id: string; label: string };
+export type MenuItem = {
+	id: string;
+	cat: string;
+	name: string;
+	price: number;
+	desc?: string;
+	image?: string;
+	alt?: string;
+};
