@@ -42,7 +42,7 @@
 			</p>
 		{/if}
 
-		<div class="mt-3 flex items-center justify-end">
+		<div class="mt-3 flex items-center justify-start gap-4">
 			<a
 				href={item.href}
 				class="mr-auto inline-flex items-center gap-1 text-sm font-semibold text-emerald-400"
