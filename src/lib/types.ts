@@ -23,4 +23,7 @@ export type MenuItem = {
 	desc?: string;
 	image?: string;
 	alt?: string;
+	href?: string; // optional “view details”
+	tag?: string;
+	badgeColor?: string; // tailwind token like 'bg-emerald-600'
 };

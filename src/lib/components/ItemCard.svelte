@@ -21,6 +21,14 @@
 			decoding="async"
 			class="h-full w-full object-cover"
 		/>
+		{#if item.tag}
+			<span
+				class="absolute top-3 left-3 rounded-full px-2.5 py-1 text-xs capitalize font-semibold text-white
+                           ring-1 ring-white/20 {item.badgeColor ?? 'bg-emerald-600'}"
+			>
+				{item.tag}
+			</span>
+		{/if}
 	</div>
 
 	<div class="p-4 text-white/90">

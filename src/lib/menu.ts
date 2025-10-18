@@ -59,9 +59,11 @@ const itemsRaw = [
     name: 'Spooky Sugar Cookies (12 pack)',
     price: 40,
     desc: 'Hand-decorated sugar cookies: pumpkins, ghosts, spiders, and “BOO” plaques. 12-pack.',
-    image: 'https://i.redd.it/zyoe8g7ndlv11.jpg',
+    // image: 'https://i.redd.it/zyoe8g7ndlv11.jpg',
+    image: 'https://assets.cdn.filesafe.space/a8iObHpvOlsBuCS6edJN/media/68e6972b0650b5eb6af71014.jpeg',
     alt: 'Decorated Halloween sugar cookies',
-    href: '/bakes/spooky-sugar-cookies-12-pack'
+    tag: 'Limited Run',
+    href: '/bakes/spooky-sugar-cookies-12-pack',
   },
   {
     cat: 'cookies',
@@ -70,6 +72,8 @@ const itemsRaw = [
     desc: 'Soft vanilla sugar cookies iced as friendly ghosts. 6-pack.',
     image: 'https://i.etsystatic.com/32834753/r/il/4340a7/5381342788/il_1080xN.5381342788_nng5.jpg',
     alt: 'Ghost-shaped sugar cookies',
+    badgeColor: 'bg-orange-600',
+    tag: 'fan favorite',
     href: '/bakes/ghost-sugar-cookies-6-pack'
   },
   {
