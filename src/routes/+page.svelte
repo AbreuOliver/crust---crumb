@@ -5,6 +5,8 @@
 	import '../app.css';
 	import Featured from '$lib/components/sections/3-Featured.svelte';
 	import type { FeaturedItem } from '$lib/types';
+	import Testimonials from '$lib/components/sections/5-Testimonials.svelte';
+	import Footer from '$lib/components/2-Footer.svelte';
 
 	const featured: FeaturedItem[] = [
 		{
@@ -61,9 +63,33 @@
 		}
 		// …
 	];
+
+
+  const quotes = [
+    {
+      id: 'a',
+    //   quote: 'The sourdough is unreal—crisp crust with a soft, chewy center.',
+    quote: `These cookies are absolutely irresistible! Not only are they beautifully decorated, but they're delicious as well! It is impossible to eat just one!`,  
+	author: 'Laura G.',
+      role: 'Cookie Customer',
+      location: 'Raleigh, NC',
+      rating: 5
+    },
+    {
+      id: 'b',
+      quote: `I’ve never had much of a sweet tooth, but my taste buds seem to have made an exception for Nichole‘s sweets! I’ve yet to try something she’s made that I didn’t immediately crave again. Treat yourself to a taste — you absolutely won’t regret it!`,
+      author: 'Oliver A.',
+      role: 'Catering order',
+      rating: 5
+    }
+  ];
+
+
 </script>
 
 <Hero />
 <About />
 <!-- <Featured heading="Seasonal" items={featured} /> -->
 <Menu />
+<Testimonials heading="Loved by our neighbors" {quotes} testimonials={quotes} />
+<Footer />

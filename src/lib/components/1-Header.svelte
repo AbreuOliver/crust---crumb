@@ -41,7 +41,7 @@
 <!-- ╔══════════════════════════════════════════════════════════════════╗
      ║                              HEADER                              ║
      ╚══════════════════════════════════════════════════════════════════╝ -->
-<header class="sticky top-0 z-[100] flex h-20 w-screen items-center justify-center bg-[var(--primary-green)] p-4 backdrop-blur-md">
+<header class="sticky top-0 z-[100] flex h-16 w-screen items-center justify-center bg-[var(--primary-green)] px-4 backdrop-blur-md">
   <nav class="flex h-full w-full max-w-screen-lg">
     <!-- LEFT -->
     <div class="flex items-center">

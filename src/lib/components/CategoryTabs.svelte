@@ -1,6 +1,6 @@
 <!-- src/lib/components/menu/CategoryTabs.svelte -->
 <script lang="ts">
-  import type { Category } from '$lib/types/menu';
+  import type { Category } from '$lib/types';
   import { createEventDispatcher } from 'svelte';
   export let categories: Category[] = [];
   export let active = '';
@@ -9,7 +9,7 @@
 </script>
 
 <!-- Mobile -->
-<div class="z-40 px-4 md:hidden">
+<div class="z-40 px-4 md:hidden sticky top-32">
   <div class="overflow-hidden rounded-xl border border-white/20 bg-black/60 backdrop-blur-sm">
     <ul class="divide-y divide-white/10" role="tablist" aria-label="Menu categories">
       {#each categories as c}

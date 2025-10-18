@@ -78,7 +78,7 @@ const itemsRaw = [
   },
   {
     cat: 'cookies',
-    name: 'Chocolate Chip Cookies w/ Sourdough Discard (6 pack)',
+    name: 'Sourdough Chocolate Chip Cookies (6 pack)',
     price: 12,
     desc: 'Chewy, bakery-style chocolate chip cookies with a subtle sourdough depth. 6-pack.',
     image: 'https://mysecretconfections.com/wp-content/uploads/2020/05/DSC_1689.jpg',
