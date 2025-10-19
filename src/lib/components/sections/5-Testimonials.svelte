@@ -18,7 +18,7 @@
   const stars = (n = 0) => Array.from({ length: 5 }, (_, i) => i < (n ?? 0));
 </script>
 
-<section id="testimonials" class="relative z-10 bg-black py-16 sm:py-24">
+<section id="testimonials" class="relative z-10 bg-black py-32 sm:py-24">
   <div class="mx-auto max-w-5xl px-6 lg:px-12 xl:px-6 2xl:px-0">
     <h2 class="serif px-0 text-3xl font-light text-white sm:text-4xl">{heading}</h2>
 

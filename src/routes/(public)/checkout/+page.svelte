@@ -1,4 +1,4 @@
-<div class="min-w-screen min-h-screen bg-gray-50 py-5">
+<!-- <div class="min-w-screen min-h-screen bg-gray-50 py-5">
     <div class="px-5">
         <div class="mb-2">
             <a href="#" class="focus:outline-none hover:underline text-gray-500 text-sm"><i class="mdi mdi-arrow-left text-gray-400"></i>Back</a>
@@ -167,9 +167,146 @@
             </div>
         </div>
     </div>
-    <!-- <div class="p-5">
-        <div class="text-center text-gray-400 text-sm">
-            <a href="https://www.buymeacoffee.com/scottwindon" target="_blank" class="focus:outline-none underline text-gray-400"><i class="mdi mdi-beer-outline"></i>Buy me a beer</a> and help support open-resource
+</div> -->
+
+<script lang="ts">
+  import { cart, cartSubtotal } from '$lib/stores/cart';
+
+  // Props come from your payment module (no Stripe logic here)
+  let {
+    mountPayment,           // Svelte action: (node: HTMLElement) => { destroy?: () => void }
+    onConfirm,              // (email: string) => Promise<void>
+    isSubmitting = false,   // boolean (or you can pass a store and unwrap with $isSubmitting)
+    submitError = '',
+    submitSucceeded = false
+  } = $props();
+
+  // Local UI state
+  let email = $state('');
+
+  // Simple currency formatter (your store uses whole-dollar numbers; adjust if using cents)
+  const fmt = (n: number) =>
+    new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(n);
+
+  // Derived UI flag
+  const hasItems = $derived(() => $cart.lines.length > 0);
+</script>
+
+<section class="min-h-screen bg-white">
+  <!-- Breadcrumbs -->
+  <div class="mx-auto max-w-7xl px-6 pt-8">
+    <nav class="text-sm text-zinc-500">
+      <a href="/" class="hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)] rounded">Home</a>
+      <span class="px-2">/</span>
+      <span class="text-zinc-700">Checkout</span>
+    </nav>
+
+    <h1 class="mt-4 text-3xl md:text-4xl font-bold text-zinc-800 serif">Checkout</h1>
+  </div>
+
+  <!-- Main -->
+  <div class="mx-auto max-w-7xl px-6 pb-24 pt-8 grid grid-cols-1 lg:grid-cols-5 gap-8">
+    <!-- Order summary -->
+    <aside class="lg:col-span-2 space-y-4">
+      <div class="rounded-lg border border-zinc-200 bg-white">
+        <div class="p-4 border-b border-zinc-200">
+          <h2 class="text-base font-semibold text-zinc-800">Order summary</h2>
         </div>
-    </div> -->
-</div>
+
+        <ul class="divide-y divide-zinc-200">
+          {#if !hasItems}
+            <li class="p-4 text-zinc-500 text-sm">Your cart is empty.</li>
+          {:else}
+            {#each $cart.lines as line}
+              <li class="p-4 flex items-center gap-3">
+                <!-- Add product image here if you track it per line -->
+                <div class="flex-1">
+                  <p class="text-sm font-medium text-zinc-800">{line.name}</p>
+                  <p class="text-xs text-zinc-500">Qty {line.qty}</p>
+                </div>
+                <div class="text-sm font-medium text-zinc-800">
+                  {fmt(line.price * line.qty)}
+                </div>
+              </li>
+            {/each}
+          {/if}
+        </ul>
+
+        <div class="p-4 space-y-2 text-sm">
+          <div class="flex justify-between">
+            <span class="text-zinc-600">Subtotal</span>
+            <span class="font-medium text-zinc-800">{fmt($cartSubtotal)}</span>
+          </div>
+          <!-- Add tax/shipping rows here when you compute them server-side -->
+          <div class="h-px bg-zinc-200 my-2"></div>
+          <div class="flex justify-between text-base">
+            <span class="text-zinc-700">Total</span>
+            <span class="font-semibold text-zinc-900">{fmt($cartSubtotal)}</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Payment -->
+    <form class="lg:col-span-3 space-y-6" on:submit|preventDefault={() => onConfirm(email)}>
+      <!-- Contact (email only) -->
+      <div class="rounded-lg border border-zinc-200 bg-white">
+        <div class="p-4 border-b border-zinc-200">
+          <h2 class="text-base font-semibold text-zinc-800">Contact</h2>
+        </div>
+        <div class="p-4">
+          <label class="block text-sm font-medium text-zinc-700 mb-1" for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            required
+            bind:value={email}
+            class="w-full rounded-lg border border-zinc-200 px-3 py-2 text-zinc-900 outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-green)]"
+            placeholder="you@example.com"
+            autocomplete="email"
+          />
+          <p class="mt-1 text-xs text-zinc-500">We’ll send your receipt here.</p>
+        </div>
+      </div>
+
+      <!-- Payment Element mount (no Stripe logic here) -->
+      <div class="rounded-lg border border-zinc-200 bg-white">
+        <div class="p-4 border-b border-zinc-200">
+          <h2 class="text-base font-semibold text-zinc-800">Payment</h2>
+        </div>
+        <div class="p-4">
+          <div id="payment-element" use:mountPayment class="rounded-lg"></div>
+          <p class="mt-2 text-xs text-zinc-500">All transactions are secured.</p>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="flex items-center gap-4">
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center rounded-lg px-4 py-2 font-semibold text-white bg-zinc-900 hover:bg-zinc-800 focus-visible:ring-2 focus-visible:ring-[var(--primary-green)] disabled:opacity-60"
+          disabled={!hasItems || isSubmitting}
+        >
+          {#if isSubmitting}
+            Processing…
+          {:else}
+            Pay {fmt($cartSubtotal)}
+          {/if}
+        </button>
+
+        {#if submitError}
+          <p class="text-sm text-red-600">{submitError}</p>
+        {/if}
+
+        {#if submitSucceeded}
+          <p class="text-sm text-green-700">Payment complete! Check your email for a receipt.</p>
+        {/if}
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  :root { --primary-green: #16a34a; } /* fallback if not already defined */
+</style>
+

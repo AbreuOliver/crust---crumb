@@ -10,7 +10,7 @@
   const label = (id: string) => categories.find((c) => c.id === id)?.label ?? '';
 </script>
 
-<section id="menu" class="relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 pb-12 backdrop-blur-3xl lg:pt-0 lg:pb-32 scroll-mt-24">
+<section id="menu" class="border-t border-neutral-700 relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 pb-12 backdrop-blur-3xl lg:pt-0 lg:pb-32 scroll-mt-24">
   <div class="mx-auto max-w-5xl px-0 lg:px-12 xl:px-6 xl:pb-96 2xl:px-0">
     <h2 class="serif px-6 text-4xl font-thin text-white xl:text-6xl">Menu</h2>
 

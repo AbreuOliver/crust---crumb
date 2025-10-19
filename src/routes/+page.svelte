@@ -91,5 +91,5 @@
 <About />
 <!-- <Featured heading="Seasonal" items={featured} /> -->
 <Menu />
-<Testimonials heading="Loved by our neighbors" {quotes} testimonials={quotes} />
+<Testimonials heading="Loved by our neighbors" testimonials={quotes} />
 <Footer />
